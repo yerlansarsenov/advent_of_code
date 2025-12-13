@@ -1,16 +1,12 @@
 package day3
 
 fun main() {
-    println(getSumOfInvalidIDs())
-}
-
-private fun getSumOfInvalidIDs(): Long {
     val lines = readInput()
     var sum = 0L
     for (line in lines) {
         sum += line.biggestBattery()
     }
-    return sum
+    println(sum)
 }
 
 private fun String.biggestBattery(): Int {
