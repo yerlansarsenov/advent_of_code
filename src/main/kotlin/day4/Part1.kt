@@ -20,18 +20,3 @@ fun main() {
     }
     println(sum)
 }
-
-private fun getCountOfAdjacentPapers(grid: List<CharArray>, i: Int, j: Int): Int {
-    var cnt = 0
-    for (y in (i - 1)..(i + 1)) {
-        for (x in (j - 1)..(j + 1)) {
-            if (y == i && x == j) continue
-            grid.getOrNull(y)?.getOrNull(x)?.let {
-                if (it == Paper) {
-                    cnt++
-                }
-            }
-        }
-    }
-    return cnt
-}
